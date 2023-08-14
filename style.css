@@ -1,13 +1,53 @@
-body,html{
-    height: 100vh;
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #ecf0f1;
 }
-#sidebar{
-    background-color:#333333 ;
-    display:flex;
-    flex-direction: column;
-    height: 100vh;
-    padding: 15px;
+
+/* Container styles */
+.container1 {
+    display: flex;
+    color: #ecf0f1;
+    height: 100vh; /* Full viewport height */
+    margin: 0 0;
+    padding: 0;
 }
+.sidebar.collapsed span,
+.sidebar.collapsed a {
+    display: none;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 230px; /* Adjust the width as needed */
+    background-color: #333333;
+    color: white;
+    padding: 20px 0;
+    transition: width 0.3s ease-in-out;
+    
+}
+
+/* Main content styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+    transition: margin-left 0.3s ease-in-out;
+    color: black;
+}
+
+/* Collapsed sidebar styles */
+.sidebar.collapsed {
+    padding-left: 0;
+    width: 60px;
+}
+
+.main-content.collapsed {
+    margin-left: 1px;
+}
+
 .sidebar_btn {
     display: block;
     padding: 10px 20px;
@@ -51,12 +91,6 @@ body,html{
 
 .blog_btn .btn_icon {
     background-image: url("img/comment.png");
-}
-
-#main{
-    padding:0;
-    margin: 0;
-    background-color: whitesmoke;
 }
 #nav{
     width: 100%;

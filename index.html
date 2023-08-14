@@ -13,20 +13,20 @@
 <body>
     <div class="container-fluid">
         <div class="row">
+            <!-- side bar -->
             <div class="col-sm-2" id="sidebar">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12">
-                            <i class="fi fi-rr-edit"></i>
-                            <img src="img/comment.png" alt="">
-                           <a href="users_info"><button class="sidebar_btn">User's Info</button></a> <br>
-                            <a href="blog.html"><button class="sidebar_btn">Blogs</button></a>
+                            <span class="logo">Admin Panel</span>
+                            <a href="index.html" class="sidebar_btn users_info_btn"><span class="btn_icon"></span> User's Info</a><br>
+                            <a href="blog.html" class="sidebar_btn blog_btn"><span class="btn_icon"></span> Blogs</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-10" id="main">
-                
+                <!-- nav bar add or just comment it -->
                     <div class="container-fluid"id="nav">
                         <nav class="navbar bg-body-tertiary" data-bs-theme="dark" >
                             <div class="container-fluid" >
@@ -38,7 +38,8 @@
                             </div>
                           </nav>
                     </div>
-                    <div class="container-fluid" id="banner">
+                    <!-- info -->
+                    <div class="container-fluid" id="user_info_banner">
                         <div class="row">
                             <div class="col-sm-4">
                                 <img src="img/admin_img.jpg" class="img-fluid">
@@ -52,6 +53,7 @@
                     </div>                    
                     <div class="container-fluid">
                         <div class="row">
+                            <!-- table container -->
                             <div class="container-fluid" id="table_container">
                                 <table class="table table-borderless" id="table">
                                     <thead>

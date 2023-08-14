@@ -2,21 +2,57 @@ body,html{
     height: 100vh;
 }
 #sidebar{
-    background-color:#1c2e4a ;
+    background-color:#333333 ;
     display:flex;
     flex-direction: column;
     height: 100vh;
     padding: 15px;
 }
-.sidebar_btn{
-    width: 100%;
-    margin: 10px auto;
-    background-color: white;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    box-shadow: 0 10 10 100 black;
+.sidebar_btn {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    position: relative;
+    padding-left: 50px;
+
 }
+.logo {
+    display: block;
+    color: white;
+    font-size: 1.5rem; /* Adjust size as needed */
+    padding: 20px 20px 10px;
+}
+
+.sidebar_btn:hover {
+    background-color: #555; /* Darker shade when hovered */
+}
+
+.sidebar_btn i {
+    margin-right: 10px;
+}
+.sidebar_btn .btn_icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    background-repeat: no-repeat;
+    background-position: left center; /* Adjust position to add space */
+    background-size: 20px 20px;
+}
+
+/* Icons for specific buttons */
+.users_info_btn .btn_icon {
+    background-image: url("img/users-alt.png");
+}
+
+.blog_btn .btn_icon {
+    background-image: url("img/comment.png");
+}
+
 #main{
     padding:0;
     margin: 0;
@@ -26,7 +62,7 @@ body,html{
     width: 100%;
     padding: 0;
 }
-#banner{
+#user_info_banner{
     margin: 20px auto;
     background-color: white;
     width: 85%;
@@ -47,3 +83,46 @@ body,html{
     border: 50px;
     
 }
+/* Additional styling for the form */
+#banner form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#banner form label {
+    font-weight: bold;
+}
+
+#banner form input[type="text"],
+#banner form input[type="date"],
+#banner form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#banner form input[type="file"] {
+    display: block;
+    margin-top: 5px;
+}
+
+#banner form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#banner form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Other existing styles... */

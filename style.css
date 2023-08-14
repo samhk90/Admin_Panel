@@ -27,8 +27,23 @@ body,html{
     padding: 0;
 }
 #banner{
+    margin: 20px auto;
     background-color: white;
-    width: 95%;
+    width: 85%;
     border-radius: 20px;
-    box-shadow:10px 10px 10px black;
+    box-shadow:10px 10px 10px rgba(0, 0, 0, 0.636);
+}
+#table_container{
+    margin: 20px auto;
+    width: 90%;
+    background-color: white;
+    border: 50px;
+    box-shadow:10px 10px 10px rgba(0, 0, 0, 0.636);
+    padding: 20px;
+}
+#table{
+    
+    background-color: white;
+    border: 50px;
+    
 }

@@ -18,7 +18,9 @@ body, html {
 .sidebar.collapsed a {
     display: none;
 }
-
+.hidden {
+    display: none;
+}
 /* Sidebar styles */
 .sidebar {
     width: 230px; 
@@ -89,8 +91,17 @@ body, html {
     background-image: url("img/users-alt.png");
 }
 
+.event_btn .btn_icon {
+    background-image: url("img/calendar.png");
+}
 .blog_btn .btn_icon {
-    background-image: url("img/comment.png");
+    background-image: url("img/comment-alt.png");
+}
+.problem_btn .btn_icon {
+    background-image: url("img/pencil.png");
+}
+.list_btn .btn_icon {
+    background-image: url("img/list-check.png");
 }
 #nav{
     width: 100%;

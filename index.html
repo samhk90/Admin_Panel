@@ -17,12 +17,15 @@
                         <div class="col-sm-12">
                           <button class="navbar-toggler" type="button" id="toggleButton" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"
                           style="padding-left: 10px;">
-                            <img src="img/hamburger.png" alt="">
+                            <img src="img/hamburger.png" alt="Hamburger Icon" id="hamburgerIcon">
+                            <img src="img/cross.png" alt="Cross Icon" id="crossIcon">
                         </button>
                         <span class="logo"><h4>Admin Panel</h4></span>
                         <a href="index.html" class="sidebar_btn users_info_btn"><span class="btn_icon"></span> User's Info</a><br>
-                        <a href="blog.html" class="sidebar_btn blog_btn"><span class="btn_icon"></span> Blogs</a><br>
-                        <a href="set.html" class="sidebar_btn blog_btn"><span class="btn_icon"></span> Set List</a>
+                        <a href="event.html" class="sidebar_btn event_btn"><span class="btn_icon"></span> Add Event</a><br>
+                        <a href="blog.html" class="sidebar_btn blog_btn"><span class="btn_icon"></span>Add Blogs</a><br>
+                        <a href="problemset.html" class="sidebar_btn problem_btn"><span class="btn_icon"></span>Add Problem Set</a><br>
+                        <a href="setlist.html" class="sidebar_btn list_btn"><span class="btn_icon"></span> Set List</a>
                     </div>
                     </div>
                 </div>
@@ -35,7 +38,7 @@
                                 <img src="img/admin_img.jpg" class="img-fluid">
                             </div>
                             <div class="col-sm-8">
-                                <h5>Welcome Back</h5>
+                                <h5 style="padding: 5px;">Welcome Back</h5>
                                 <span style="color: rgb(119, 0, 255);text-align:left;padding:0;margin:0;"><h2><b>Admin Name</b></h2></span>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem vel possimus vitae, architecto nostrum, omnis officiis nobis aliquam quaerat, sequi quibusdam aliquid! Labore deleniti rerum velit quos. Assumenda, nisi velit.</p>
                             </div>
@@ -93,11 +96,20 @@
                 const toggleButton = document.getElementById("toggleButton");
                 const sidebar = document.querySelector(".sidebar");
                 const mainContent = document.querySelector(".main-content");
+                const hamburgerIcon = document.getElementById("hamburgerIcon");
+                const crossIcon = document.getElementById("crossIcon");
             
                 toggleButton.addEventListener("click", function () {
                     sidebar.classList.toggle("collapsed");
                     mainContent.classList.toggle("collapsed");
+                    
+                    hamburgerIcon.classList.toggle("hidden");
+                    crossIcon.classList.toggle("hidden", sidebar.classList.contains("collapsed"));
                 });
+            
+                // Hide the cross icon and show the hamburger icon initially
+                hamburgerIcon.classList.add("hidden");
+                crossIcon.classList.remove("hidden");
             });
             
           </script>

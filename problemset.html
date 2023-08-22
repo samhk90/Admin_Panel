@@ -15,19 +15,18 @@
         <div class="sidebar">
             <div class="row">
                 <div class="col-sm-12">
-                    <button class="navbar-toggler" type="button" id="toggleButton"
-                        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"
-                        style="padding-left: 10px;">
-                        <img src="img/hamburger.png" alt="">
-                    </button>
-                    <span class="logo">
-                        <h4>Admin Panel</h4>
-                    </span>
-                    <a href="index.html" class="sidebar_btn users_info_btn"><span class="btn_icon"></span> User's
-                        Info</a><br>
-                    <a href="blog.html" class="sidebar_btn blog_btn"><span class="btn_icon"></span> Blogs</a><br>
-                    <a href="set.html" class="sidebar_btn blog_btn"><span class="btn_icon"></span> Set List</a>
-                </div>
+                  <button class="navbar-toggler" type="button" id="toggleButton" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"
+                  style="padding-left: 10px;">
+                    <img src="img/hamburger.png" alt="Hamburger Icon" id="hamburgerIcon">
+                    <img src="img/cross.png" alt="Cross Icon" id="crossIcon">
+                </button>
+                <span class="logo"><h4>Admin Panel</h4></span>
+                <a href="index.html" class="sidebar_btn users_info_btn"><span class="btn_icon"></span> User's Info</a><br>
+                <a href="event.html" class="sidebar_btn event_btn"><span class="btn_icon"></span> Add Event</a><br>
+                <a href="blog.html" class="sidebar_btn blog_btn"><span class="btn_icon"></span>Add Blogs</a><br>
+                <a href="problemset.html" class="sidebar_btn problem_btn"><span class="btn_icon"></span>Add Problem Set</a><br>
+                <a href="setlist.html" class="sidebar_btn list_btn"><span class="btn_icon"></span> Set List</a>
+            </div>
             </div>
         </div>
 
@@ -81,13 +80,22 @@
             const toggleButton = document.getElementById("toggleButton");
             const sidebar = document.querySelector(".sidebar");
             const mainContent = document.querySelector(".main-content");
-
+            const hamburgerIcon = document.getElementById("hamburgerIcon");
+            const crossIcon = document.getElementById("crossIcon");
+        
             toggleButton.addEventListener("click", function () {
                 sidebar.classList.toggle("collapsed");
                 mainContent.classList.toggle("collapsed");
+                
+                hamburgerIcon.classList.toggle("hidden");
+                crossIcon.classList.toggle("hidden", sidebar.classList.contains("collapsed"));
             });
+        
+            // Hide the cross icon and show the hamburger icon initially
+            hamburgerIcon.classList.add("hidden");
+            crossIcon.classList.remove("hidden");
         });
-
+        
     </script>
 
 </body>

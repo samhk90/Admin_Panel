@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css"> <!-- Link to your CSS file -->
+    <title>Admin Login</title>
+</head>
+<body>
+    <div class="main-content">
+        <div id="banner">
+            <form class="center-form" id="login-form">
+                <span style="text-align: center;color:white;"><h2>Admin Login</h2></span>
+                <input class="cinput" type="text" id="username" name="username" placeholder="Username" required><br>
+                <input class="cinput" type="password" id="password" name="Password" placeholder="Password" required><br>
+                <button class="cinput" id="login" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginForm = document.getElementById("login-form");
+        
+            loginForm.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the form from submitting and reloading the page
+                
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+        
+                // Check if the username and password match your criteria
+                if (username === "admin" && password === "password") {
+                    window.location.href = "index.html"; // Redirect to index.html
+                } else {
+                    alert("Invalid username or password. Please try again.");
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>
